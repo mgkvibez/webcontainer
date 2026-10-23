@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>mgk sandbox — Node.js in your browser</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>mgk<span>sandbox</span></h1>
+    <p class="tagline">A Node.js dev environment running entirely in your browser tab. No install, no server-side container — <a href="https://webcontainers.io" rel="noopener">WebContainers</a>.</p>
+    <div class="toolbar">
+      <select id="starter">
+        <option value="express">Starter: Express</option>
+        <option value="plain">Starter: plain http</option>
+      </select>
+      <button id="boot">Boot container</button>
+      <button id="run" disabled>npm install → node server.js</button>
+      <span id="status" class="status">idle</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="pane">
+      <h2>server.js</h2>
+      <textarea id="editor" spellcheck="false"></textarea>
+    </section>
+    <section class="pane">
+      <h2>terminal</h2>
+      <pre id="terminal"></pre>
+    </section>
+    <section class="pane wide">
+      <h2>preview <span id="preview-url"></span></h2>
+      <iframe id="preview" title="preview"></iframe>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
