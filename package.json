@@ -1,0 +1,10 @@
+{
+  "name": "webcontainer-sandbox",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node webcontainer-app/server.mjs",
+    "test": "node --test tests/"
+  }
+}
